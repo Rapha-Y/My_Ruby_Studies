@@ -1,9 +1,13 @@
-string_var = "    Stringy Cheese    "
-puts string_var.upcase()
-puts string_var.downcase()
-puts string_var.strip()
-puts string_var.length()
-puts string_var.include? "Stringy"
-puts string_var[4]
-puts string_var[4, 14]
-puts string_var.index("C")
+number_var = 63
+puts("Rule " + number_var.to_s)
+
+neg_num = -34
+puts neg_num.abs().to_s
+
+pi_num = 3.14
+puts pi_num.round()
+puts pi_num.floor()
+puts pi_num.ceil()
+
+puts Math.sqrt(49)
+puts Math.log(1)
