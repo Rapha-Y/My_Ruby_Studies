@@ -1,9 +1,19 @@
-weather = "cloudy"
+puts "Enter first number: "
+num1 = gets.chomp().to_f
+puts "Enter operator: "
+op = gets.chomp()
+puts "Enter second number: "
+num2 = gets.chomp().to_f
 
-if (weather == "rainy")
-    puts "It's raining today."
-elsif (weather == "sunny")
-    puts "It's hot today."
+case op
+when "+"
+    puts num1 + num2
+when "-"
+    puts num1 - num2
+when "*"
+    puts num1 * num2
+when "/"
+    puts num1 / num2
 else
-    puts "It's not a bad weather."
+    puts "Invalid operator"
 end
