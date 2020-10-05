@@ -1,9 +1,6 @@
-cities = {
-    "Prontera" => "prt",
-    "Payon" => "pay",
-    "Morroc" => "moc",
-    "Alberta" => "alb",
-    "Geffen" => "gef"
-}
+def greet(name = "World")
+    puts "Hello " + name
+end
 
-puts cities["Geffen"]
+greet()
+greet("Emily")
