@@ -1,6 +1,5 @@
-def greet(name = "World")
-    puts "Hello " + name
+def increment(num)
+    return num + 1, "Success"
 end
 
-greet()
-greet("Emily")
+puts increment(1)
