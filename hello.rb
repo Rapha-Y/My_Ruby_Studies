@@ -1,19 +1,9 @@
-spb = ["Jintan", "Menma", "Anaru", "Tsuruko", "Yukiatsu", "Poppo"]
-
-for kid in spb
-    puts kid
+def pow(base, exp)
+    ans = 1
+    for i in 1..exp
+        ans *= base
+    end
+    return ans
 end
 
-zpl = ["William", "Caesar", "Gyro"]
-
-zpl.each do |ally|
-    puts ally
-end
-
-for i in 0..3
-    puts i + 1
-end
-
-4.times do |index|
-    puts index + 1
-end
+puts pow(2, 3)
