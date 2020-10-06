@@ -1,9 +1,7 @@
-def pow(base, exp)
-    ans = 1
-    for i in 1..exp
-        ans *= base
-    end
-    return ans
-end
+# single line comment
 
-puts pow(2, 3)
+=begin
+    multiple
+    line
+    comment
+=end
