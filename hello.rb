@@ -1,7 +1,9 @@
-# single line comment
+File.open("chars.txt", "r") do |file|
+    for character in file.readlines()
+        puts character
+    end
+end
 
-=begin
-    multiple
-    line
-    comment
-=end
+file = File.open("chars.txt", "r")
+puts file.read
+file.close()
