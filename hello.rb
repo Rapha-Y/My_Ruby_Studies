@@ -1,15 +1,19 @@
-number = 0
-answer = 63
+spb = ["Jintan", "Menma", "Anaru", "Tsuruko", "Yukiatsu", "Poppo"]
 
-puts "Guess number: "
-
-while number != answer
-    number = gets.chomp().to_i
-    if number < answer
-        puts "Higher, try again: "
-    elsif number > answer
-        puts "Lower, try again: "
-    end
+for kid in spb
+    puts kid
 end
 
-puts "You won!"
+zpl = ["William", "Caesar", "Gyro"]
+
+zpl.each do |ally|
+    puts ally
+end
+
+for i in 0..3
+    puts i + 1
+end
+
+4.times do |index|
+    puts index + 1
+end
