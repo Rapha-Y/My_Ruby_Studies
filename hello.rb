@@ -1,9 +1,15 @@
-File.open("chars.txt", "r") do |file|
-    for character in file.readlines()
-        puts character
-    end
-end
+file = File.open("chars.txt", "w")
+file.write("Rose, Knight\nLily, Blacksmith\nLuna, Tactician\nAria, Scout")
+file.close()
 
-file = File.open("chars.txt", "r")
-puts file.read
+file = File.open("chars.txt", "a")
+file.write("\nEmily, Guard")
+file.close()
+
+file = File.open("chars.txt", "r+")
+file.readline()
+file.readline()
+file.readline()
+file.readline()
+file.write("Inexistent Character")
 file.close()
