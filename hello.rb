@@ -1,15 +1,14 @@
-file = File.open("chars.txt", "w")
-file.write("Rose, Knight\nLily, Blacksmith\nLuna, Tactician\nAria, Scout")
-file.close()
+puts "Insert denominator for 10: "
+den = gets.chomp().to_i
 
-file = File.open("chars.txt", "a")
-file.write("\nEmily, Guard")
-file.close()
+begin
+    #ans = 10 / den
+    #puts ans
 
-file = File.open("chars.txt", "r+")
-file.readline()
-file.readline()
-file.readline()
-file.readline()
-file.write("Inexistent Character")
-file.close()
+    den = den.to_s
+    err = 10 / den
+rescue ZeroDivisionError
+    puts "Math error: Division by zero"
+rescue TypeError => e
+    puts e
+end
