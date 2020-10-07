@@ -1,26 +1,33 @@
-class Card
-    attr_accessor :name, :cost, :attack, :health
-
-    def initialize(name, cost, attack, health)
-        @name = name
-        @cost = cost
-        @attack = attack
-        @health = health
-    end
-
-    def has_premium_statline
-        if @health <= @cost
-            return false
-        elsif @attack < @cost
-            return false
-        else
-            return true
-        end
+class Question
+    attr_accessor :prompt, :answer
+    def initialize(prompt, answer)
+        @prompt = prompt
+        @answer = answer
     end
 end
 
-cithria = Card.new("Cithria of Cloudfield", 1, 2, 2)
-battlesmith = Card.new("Battlesmith", 2, 2, 2)
+q1 = "What color are apples?\na) Red\nb) Pink\nc) Yellow\nd) Blue"
+q2 = "What color are bananas?\na) Red\nb) Pink\nc) Yellow\nd) Blue"
+q3 = "What color are blueberries?\na) Red\nb) Pink\nc) Yellow\nd) Blue"
 
-puts cithria.has_premium_statline()
-puts battlesmith.has_premium_statline()
+questions = [
+    Question.new(q1, "a"),
+    Question.new(q2, "c"),
+    Question.new(q3, "d")
+]
+
+def run(questions)
+    ans = ""
+    score = 0
+
+    for question in questions
+        puts question.prompt
+        ans = gets.chomp()
+        if ans == question.answer
+            score += 1
+        end
+    end
+    puts "Final score: " + score.to_s
+end
+
+run(questions)
