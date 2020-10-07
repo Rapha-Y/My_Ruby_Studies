@@ -7,10 +7,20 @@ class Card
         @attack = attack
         @health = health
     end
+
+    def has_premium_statline
+        if @health <= @cost
+            return false
+        elsif @attack < @cost
+            return false
+        else
+            return true
+        end
+    end
 end
 
 cithria = Card.new("Cithria of Cloudfield", 1, 2, 2)
 battlesmith = Card.new("Battlesmith", 2, 2, 2)
 
-puts cithria.name
-puts battlesmith.name
+puts cithria.has_premium_statline()
+puts battlesmith.has_premium_statline()
