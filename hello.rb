@@ -1,14 +1,18 @@
-puts "Insert denominator for 10: "
-den = gets.chomp().to_i
-
-begin
-    #ans = 10 / den
-    #puts ans
-
-    den = den.to_s
-    err = 10 / den
-rescue ZeroDivisionError
-    puts "Math error: Division by zero"
-rescue TypeError => e
-    puts e
+class Card
+    attr_accessor :name, :cost, :attack, :health
 end
+
+cithria = Card.new()
+cithria.name = "Cithria of Cloudfield"
+cithria.cost = 1
+cithria.attack = 2
+cithria.health = 2
+
+battlesmith = Card.new()
+battlesmith.name = "Battlesmith"
+battlesmith.cost = 2
+battlesmith.attack = 2
+battlesmith.health = 2
+
+puts cithria.name
+puts battlesmith.name
