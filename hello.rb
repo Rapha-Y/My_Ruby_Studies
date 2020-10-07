@@ -1,33 +1,24 @@
-class Question
-    attr_accessor :prompt, :answer
-    def initialize(prompt, answer)
-        @prompt = prompt
-        @answer = answer
+class Animal
+    def feed
+        puts "Animal is fed"
     end
 end
 
-q1 = "What color are apples?\na) Red\nb) Pink\nc) Yellow\nd) Blue"
-q2 = "What color are bananas?\na) Red\nb) Pink\nc) Yellow\nd) Blue"
-q3 = "What color are blueberries?\na) Red\nb) Pink\nc) Yellow\nd) Blue"
-
-questions = [
-    Question.new(q1, "a"),
-    Question.new(q2, "c"),
-    Question.new(q3, "d")
-]
-
-def run(questions)
-    ans = ""
-    score = 0
-
-    for question in questions
-        puts question.prompt
-        ans = gets.chomp()
-        if ans == question.answer
-            score += 1
-        end
+class Predator < Animal
+    def hunt
+        puts "Animal is hunting"
     end
-    puts "Final score: " + score.to_s
 end
 
-run(questions)
+class TiredPredator < Predator
+    def hunt
+        puts "Animal is too tired"
+    end
+end
+
+pred = Predator.new()
+pred.hunt
+pred.feed
+
+old = TiredPredator.new()
+old.hunt
